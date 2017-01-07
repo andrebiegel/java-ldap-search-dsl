@@ -4,11 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import de.usu.abiegel.ldap.Attribute;
-import de.usu.abiegel.ldap.InheritenceBreaker;
-import de.usu.abiegel.ldap.Operation;
-import de.usu.abiegel.ldap.Token;
-import de.usu.abiegel.ldap.TypedInstance;
+import de.usu.abiegel.ldap.internal.Attribute;
+import de.usu.abiegel.ldap.internal.InheritenceBreaker;
+import de.usu.abiegel.ldap.internal.Operation;
+import de.usu.abiegel.ldap.internal.Token;
 
 public interface And extends InheritenceBreaker {
 	public static final String AND = "&";

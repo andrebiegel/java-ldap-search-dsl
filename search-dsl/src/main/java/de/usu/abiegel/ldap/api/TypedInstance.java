@@ -1,6 +1,14 @@
-package de.usu.abiegel.ldap;
+package de.usu.abiegel.ldap.api;
+
+import java.lang.reflect.ParameterizedType;
+
+import de.usu.abiegel.ldap.internal.Attribute;
+import de.usu.abiegel.ldap.internal.Operation;
+import de.usu.abiegel.ldap.internal.Token;
 
 public class TypedInstance<T extends Token > implements Token{
+	
+	
 	Class<T> type;
 	T instance;
 
@@ -19,6 +27,8 @@ public class TypedInstance<T extends Token > implements Token{
 	private TypedInstance(T instance) {
 		super();
 		this.instance = instance;
+//		 ParameterizedType superclass = (ParameterizedType) instance.getClass().getGenericSuperclass();
+//		    typeToken = superclass.getActualTypeArguments()[0];
 	}
 
 	@Override

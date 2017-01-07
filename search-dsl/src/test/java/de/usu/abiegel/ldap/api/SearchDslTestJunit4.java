@@ -12,9 +12,10 @@ import static org.assertj.core.api.Assertions.fail; // use when writing exceptio
 import static org.assertj.core.api.Assertions.failBecauseExceptionWasNotThrown; // idem
 import static org.assertj.core.api.Assertions.filter; // for Iterable/Array assertions
 import static org.assertj.core.api.Assertions.offset; // for floating number assertions
+import static de.usu.abiegel.ldap.api.TypedInstance.typed;
 import static org.assertj.core.api.Assertions.anyOf; // use with Condition
 import static org.assertj.core.api.Assertions.contentOf; // use with File assertions
-import static de.usu.abiegel.ldap.TypedInstance.typed;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -57,7 +58,7 @@ public class SearchDslTestJunit4 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.Query#query(de.usu.abiegel.ldap.Token)}.
+	 * {@link de.usu.abiegel.ldap.api.Query#query(de.usu.abiegel.ldap.internal.Token)}.
 	 */
 	@Test
 	public void testQuery() {
@@ -66,7 +67,7 @@ public class SearchDslTestJunit4 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.And#and(de.usu.abiegel.ldap.Token[])}.
+	 * {@link de.usu.abiegel.ldap.api.And#and(de.usu.abiegel.ldap.internal.Token[])}.
 	 */
 	@Test
 	public void testAnd() {
@@ -76,7 +77,7 @@ public class SearchDslTestJunit4 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.Or#or(de.usu.abiegel.ldap.Token[])}.
+	 * {@link de.usu.abiegel.ldap.api.Or#or(de.usu.abiegel.ldap.internal.Token[])}.
 	 */
 	@Test
 	public void testOr() {
@@ -86,7 +87,7 @@ public class SearchDslTestJunit4 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.Not#not(de.usu.abiegel.ldap.Token[])}.
+	 * {@link de.usu.abiegel.ldap.api.Not#not(de.usu.abiegel.ldap.internal.Token[])}.
 	 */
 	@Test
 	public void testNot() {

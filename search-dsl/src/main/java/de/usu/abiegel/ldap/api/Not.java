@@ -4,9 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import de.usu.abiegel.ldap.InheritenceBreaker;
-import de.usu.abiegel.ldap.Token;
-import de.usu.abiegel.ldap.TypedInstance;
+import de.usu.abiegel.ldap.internal.InheritenceBreaker;
+import de.usu.abiegel.ldap.internal.Token;
 
 public interface Not extends InheritenceBreaker {
 	public static final String NOT = "!";

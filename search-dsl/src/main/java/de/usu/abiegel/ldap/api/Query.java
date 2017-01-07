@@ -1,8 +1,8 @@
 package de.usu.abiegel.ldap.api;
 
-import de.usu.abiegel.ldap.Attribute;
-import de.usu.abiegel.ldap.InheritenceBreaker;
-import de.usu.abiegel.ldap.Operation;
+import de.usu.abiegel.ldap.internal.Attribute;
+import de.usu.abiegel.ldap.internal.InheritenceBreaker;
+import de.usu.abiegel.ldap.internal.Operation;
 
 public interface Query extends InheritenceBreaker{
 
