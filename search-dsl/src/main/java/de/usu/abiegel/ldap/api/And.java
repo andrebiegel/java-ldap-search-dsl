@@ -4,9 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import de.usu.abiegel.ldap.internal.Attribute;
 import de.usu.abiegel.ldap.internal.InheritenceBreaker;
-import de.usu.abiegel.ldap.internal.Operation;
 import de.usu.abiegel.ldap.internal.Token;
 
 public interface And extends InheritenceBreaker {

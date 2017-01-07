@@ -1,7 +1,5 @@
 package de.usu.abiegel.ldap.api;
 
-import java.lang.reflect.ParameterizedType;
-
 import de.usu.abiegel.ldap.internal.Attribute;
 import de.usu.abiegel.ldap.internal.Operation;
 import de.usu.abiegel.ldap.internal.Token;
