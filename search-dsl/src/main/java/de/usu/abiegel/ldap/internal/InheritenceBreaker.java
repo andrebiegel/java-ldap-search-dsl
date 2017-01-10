@@ -11,4 +11,6 @@ public interface InheritenceBreaker extends Operation{
 	   default String asString() {
 	        return "";
 	    }
+
+	   
 }

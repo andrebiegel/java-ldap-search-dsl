@@ -17,4 +17,9 @@ public interface Operation extends Token{
     default String operation(String op) {
     	return "(" + op + childrenAsString() + ")";
     }
+    
+	default<Type extends Operation> TypedInstance<Type> ops(Type or) {
+		return TypedInstance.genericType(or);
+	}
+
 }
