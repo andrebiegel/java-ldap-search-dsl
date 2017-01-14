@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public interface InheritenceBreaker extends Operation{
-	   default List<? extends Token> children() {
+	   default List<Token> children() {
 	        return Collections.emptyList();
 	    }
 	   default String asString() {

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  *
  */
 public interface Operation extends Token{
-	List<? extends Token> children();
+	List<Token> children();
     default String childrenAsString() {
 		return children().stream().map(Token::asString).collect(Collectors.joining());
     }

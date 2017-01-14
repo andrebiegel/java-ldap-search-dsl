@@ -21,7 +21,7 @@ public interface Not extends InheritenceBreaker {
 			}
 
 			@Override
-			public List<? extends Token> children() {
+			public List<Token> children() {
 				return Arrays.asList(children).stream().map(TypedInstance::instance).collect(Collectors.toList());
 			}
 		});
@@ -48,7 +48,7 @@ public interface Not extends InheritenceBreaker {
 			}
 
 			@Override
-			public List<? extends Token> children() {
+			public List<Token> children() {
 				return Arrays.asList(children).stream().map(Supplier::get).collect(Collectors.toList());
 			}
 		};
