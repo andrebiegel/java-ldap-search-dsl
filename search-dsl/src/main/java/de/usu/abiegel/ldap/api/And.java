@@ -6,13 +6,14 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import de.usu.abiegel.ldap.internal.InheritenceBreaker;
+import de.usu.abiegel.ldap.internal.Operation;
 import de.usu.abiegel.ldap.internal.Token;
 import de.usu.abiegel.ldap.internal.TypedInstance;
 
 public interface And extends InheritenceBreaker {
 	public static final String AND = "&";
 
-	default TypedInstance<And> and(TypedInstance<? extends Token>... children) {
+	default TypedInstance<Operation> and(TypedInstance<? extends Token>... children) {
 		return ops(new And() {
 			@Override
 			public String asString() {

@@ -18,7 +18,7 @@ public interface Operation extends Token{
     	return "(" + op + childrenAsString() + ")";
     }
     
-	default<Type extends Operation> TypedInstance<Type> ops(Type or) {
+	default<Type extends Operation> TypedInstance<Operation> ops(Type or) {
 		return TypedInstance.genericType(or);
 	}
 

@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import de.usu.abiegel.ldap.internal.InheritenceBreaker;
+import de.usu.abiegel.ldap.internal.Operation;
 import de.usu.abiegel.ldap.internal.Token;
 import de.usu.abiegel.ldap.internal.TypedInstance;
 
@@ -13,7 +14,7 @@ public interface Not extends InheritenceBreaker {
 	public static final String NOT = "!";
 
 	
-	default TypedInstance<Not> not(@SuppressWarnings("unchecked") TypedInstance<? extends Token>... children) {
+	default TypedInstance<Operation> not(@SuppressWarnings("unchecked") TypedInstance<? extends Token>... children) {
 		return ops(new Not() {
 			@Override
 			public String asString() {

@@ -6,13 +6,14 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import de.usu.abiegel.ldap.internal.InheritenceBreaker;
+import de.usu.abiegel.ldap.internal.Operation;
 import de.usu.abiegel.ldap.internal.Token;
 import de.usu.abiegel.ldap.internal.TypedInstance;
 
 public interface Or extends InheritenceBreaker {
 	public static final String OR = "|";
 
-	default TypedInstance<Or> or(TypedInstance<? extends Token>... children) {
+	default TypedInstance<Operation> or(TypedInstance<? extends Token>... children) {
 		return ops(new Or() {
 			@Override
 			public String asString() {
