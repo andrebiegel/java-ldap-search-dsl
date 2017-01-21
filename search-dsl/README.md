@@ -1,11 +1,7 @@
-# Interne Nested DSL: Java :  LDAP Search DSL
+# Internal Nested DSL: Java :  LDAP Search DSL
 ## Allgemeines
-Inspiriert von einem Blog Eintrag von Benji Weber, packte mich das Interesse seine Ideen mal ausprobieren und zu verstehen, was er dort macht. Dazu kam noch eine Situation innerhalb eines Projektes, dass LDAP- Search Queries irgendwie schöner zu machen sein müssen. Daraus entstanden ist  nun ein Beispiel auf Basis von Benji Webers "Serialized Lambda".
-Die Möglichkeiten in Java interne DSLs zu erstellen, beschränken sich auf interne DSLs in der Ausprägung
-* Nested oder
-* Fluent.
+Inspiriert von einem Blog Eintrag von Benji Weber, packte mich das Interesse seine Ideen mal ausprobieren und zu verstehen, was er dort macht. Dazu kam noch eine Situation innerhalb eines Projektes, dass LDAP- Search Queries irgendwie schöner hin zu kriegen. Daraus entstanden ist nun ein Beispiel auf Basis von Benji Webers "Serialized Lambda".
 
-Nested DSLs arbeiten dabei mithilfe von geschachtelten Methodenaufrufen; Fluent DSLs hingegen mit der Verkettung von Methoden aufrufen.
 ## Serialized Lambda
 In Java 8 sind  nun Lambdas Bestandteil der Sprache geworden, welches zunächst die Schreibweisen vereinfacht und von den anonymen Klassen einen Ausweg bietet. Diese Syntax macht sich nun Benji Weber zu nutzen. Denn "Serialized Lambda" beschreibt einen Weg den Variablen Namen eines Lambdas als Stilmittel zu nutzen und auszuwerten. Im Mittelpunkt steht dabei nicht die Methode an sich, sondern die Notation. 
 
@@ -19,9 +15,9 @@ In Java 8 sind  nun Lambdas Bestandteil der Sprache geworden, welches zunächst 
     "(&(test=value)(test2=value2))"
 ```
 
-Das gezeigte Beispiel zeigt das Endergebnis. Die Schachtelung der Methoden ließt sich dabei ähnlich dem Endprodukt, erlauben zudem eine fehlerfreiere Nutzung durch z.B. die Unterstützung des Compilers für die Klammersetzung.
+Das gezeigte Beispiel zeigt das Endergebnis. Die Schachtelung der Methoden liest sich dabei ähnlich dem Endprodukt, erlauben zudem eine fehlerfreiere Nutzung durch z.B. die Unterstützung des Compilers für die Klammersetzung.
 
-Nun ist die erste Fragestellung natürlich , wie man den Parameter Namen kommt. Das Herzstück des ganzen ist die Klasse SerialiedLambda und damit der Option die Textrepresentation des Lambdas aus zu lesen. Vorraussetzung dafür ist natürlich, dass die Namen im Kompilat erhalten bleiben. Dies passiert z.B mit dem Compiler  Flag "parameters"
+Nun ist die erste Fragestellung natürlich , wie man an den Parameter Namen kommt. Das Herzstück des ganzen ist die Klasse SerializedLambda und damit der Option die Text-Representation des Lambdas aus zu lesen. Vorraussetzung dafür ist natürlich, dass die Namen im Kompilat erhalten bleiben. Dies passiert z.B mit dem Compiler Flag "parameters"
  
  ```
  
@@ -47,7 +43,7 @@ Nun ist die erste Fragestellung natürlich , wie man den Parameter Namen kommt. 
  ``` 
  ## Nested DSLs
  
- Die Idee hinter Nested DSLs ist sie vererbte Funktionen,welche die Parameter und rückgabe typen geschickt einsetzen, dass sie für den Nutzer als DSL interpretiert werden. 
+ Die Idee hinter Nested DSLs sind vererbte Funktionen, welche die Parameter und Rückgabetypen geschickt einsetzen, dass sie für den Nutzer als DSL interpretiert werden. 
  
  ```java
  
@@ -70,10 +66,10 @@ Nun ist die erste Fragestellung natürlich , wie man den Parameter Namen kommt. 
 	}
  
  ```
-  Am Beispiel von Benji Weber erkennt man schnell, dass es einfacher ist, keine generischen Typen als Parameter zu haben. Dabei kommt ihm natürlich sein HTML Beispiel zur Hilfe. In meinem Beispiel ist es jedoch der Fall, dass ein Operator von verschiedenen Typen (Operatoren und Literalen) bedient werden kann, sodass ich hier mit Generics rum probiert habe, bis ich für mich die beste Option gefunden habe. Kennt jemand eine Variante, wobei ich die attr-Funktion und damit die Kapselung mit TypedInstances umgehen kann ?   
+  Am Beispiel von Benji Weber erkennt man schnell, dass es einfacher ist, keine generischen Typen als Parameter zu haben. Dabei kommt ihm natürlich sein HTML Beispiel zur Hilfe. In meinem Beispiel ist es jedoch der Fall, dass ein Operator von verschiedenen Typen (Operatoren und Literalen) bedient werden kann, sodass ich hier mit Generics rum probiert habe, bis ich die für mich beste Option gefunden habe. Kennt jemand eine Variante, wo ich die attr-Funktion und damit die Kapselung mit TypedInstances umgehen kann?   
 
 Die Methoden selbst sind alle als Default-Methoden in Interfaces definiert. Dies ermöglicht die Nutzung von Mehrfachvererbung, welche bei normalen Klassen in Java nicht zur Verfügung steht. 
-Diese Mehrfachvererbung wiederum eröffnet, eine für mich noch nicht so erkannte OO-Perspektive. Denn dadurch kann man wunderbar die  Komponenten der DSL verknüpfen. So eine derartige Implementierung eines Decorator nennt er Forwarding-Interface-Pattern. Allerdings wüsste nicht warum es einen neuen Namen benötigt.   
+Diese Mehrfachvererbung wiederum eröffnet, eine für mich noch nicht so erkannte OO-Perspektive. Denn dadurch kann man wunderbar die  Komponenten der DSL verknüpfen. So eine derartige Implementierung eines Decorator nennt er Forwarding-Interface-Pattern. Allerdings wüsste ich nicht warum es einen neuen Namen benötigt.   
  
 ## Quellen
 * Benji Weber : Serialized Lambda (http://benjiweber.co.uk/blog/2015/08/17/lambda-parameter-names-with-reflection/)
