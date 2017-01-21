@@ -13,5 +13,7 @@ public interface Token {
 	 * 
 	 * @return
 	 */
-	String asString();
+	default String asString(){
+		return "";
+	}
 }

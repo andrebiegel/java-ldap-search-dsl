@@ -86,6 +86,10 @@ public class SearchDslTestJunit4 implements SearchDsl {
 		assertThat(query(and(attr(test -> "value"), attr(test2 -> "value2"))).asString()).isInstanceOf(String.class)
 				.isNotNull().isEqualTo("(&(test=value)(test2=value2))");
 
+		assertThat(query(and(attr(test -> "value"),attr(test2 -> "value2"))).asString()).isInstanceOf(String.class)
+		.isNotNull().isEqualTo("(&(test=value)(test2=value2))");
+
+		
 		assertThat(query(and((Supplier<Attribute<String>>) () -> test -> "value",
 				(Supplier<Attribute<String>>) () -> test2 -> "value2")).asString()).isInstanceOf(String.class)
 						.isNotNull().isEqualTo("(&(test=value)(test2=value2))");

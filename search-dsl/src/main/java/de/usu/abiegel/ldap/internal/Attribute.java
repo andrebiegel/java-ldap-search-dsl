@@ -8,5 +8,7 @@ public interface Attribute<T> extends NamedValue<T>,Token {
 	default TypedInstance<Attribute<T>> attr(Attribute<T> instance) {
 		return TypedInstance.genericType(instance);
 	}
-
+	default Attribute<T> id(Attribute<T> instance) {
+		return instance;
+	}
 }

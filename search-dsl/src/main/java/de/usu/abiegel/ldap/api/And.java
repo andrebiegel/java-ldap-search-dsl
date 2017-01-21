@@ -10,7 +10,7 @@ import de.usu.abiegel.ldap.internal.Operation;
 import de.usu.abiegel.ldap.internal.Token;
 import de.usu.abiegel.ldap.internal.TypedInstance;
 
-public interface And extends InheritenceBreaker {
+public interface And extends Operation {
 	public static final String AND = "&";
 
 	default TypedInstance<Operation> and(TypedInstance<? extends Token>... children) {

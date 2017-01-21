@@ -10,7 +10,7 @@ import de.usu.abiegel.ldap.internal.Operation;
 import de.usu.abiegel.ldap.internal.Token;
 import de.usu.abiegel.ldap.internal.TypedInstance;
 
-public interface Not extends InheritenceBreaker {
+public interface Not extends Operation {
 	public static final String NOT = "!";
 
 	

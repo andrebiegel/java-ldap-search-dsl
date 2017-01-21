@@ -75,4 +75,5 @@ public class SearchDslTestJunit5 implements SearchDsl {
 		// ...
 	}
 
+
 }
