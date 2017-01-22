@@ -1,13 +1,15 @@
 # Internal Nested DSL: Java :  LDAP Search DSL
 ## Allgemeines/ Intro
-Inspiriert von einem Blog Eintrag von Benji Weber (@benjiman), packte mich das Interesse seine Ideen mal ausprobieren und zu verstehen, was er dort macht. Dazu kam noch eine Situation innerhalb eines Projektes, dass LDAP- Search Queries irgendwie schöner hin zu kriegen. Daraus entstanden ist ein Beispiel auf Basis von Benji Webers "Serialized Lambda".
+Inspiriert von einem Blog Eintrag von Benji Weber (@benjiman), packte mich das Interesse seine Ideen mal ausprobieren und zu verstehen, was er dort macht. Dazu kam noch eine Situation innerhalb eines Projektes LDAP- Search Queries irgendwie schöner hin zu kriegen. Daraus entstanden, ist ein Beispiel auf Basis von Benji Webers "Serialized Lambda".
 
-Since i heard the talk at JavaOne14 from @benjiman about java 8, i was inspired by his way of doing things in the lambda world. so i planned for myself that, if there is any use-case, which could fit, i will play with these serialized lambda thing... it is 2017 and time has come.
+Since i heard the talk at JavaOne14 from @benjiman about java 8, i was inspired by his way of doing things in the lambda world. So i planned for myself that, if there is any use-case, which could fit, i will play with these serialized lambda thing... 
+It is 2017 and time has come.
 While working upon a project where ldap has been heavily used, i saw colleagues of mine working with "String concats" to build ldap search queries. 
 
- In these situations, i'm feeling, that there has to be a better, more clearer, beautiful way of doing things. A way someone does not start to "chitter" when he sees this or does not want to take a shower after writing the code.     
-## Serialized Lambdaa
-In Java 8 sind  nun Lambdas Bestandteil der Sprache geworden, welches zunächst die Schreibweisen vereinfacht und von den anonymen Klassen einen Ausweg bietet. Diese Syntax macht sich nun Benji Weber zu nutzen. Denn "Serialized Lambda" beschreibt einen Weg den Variablen Namen eines Lambdas als Stilmittel zu nutzen und auszuwerten. Im Mittelpunkt steht dabei nicht die Methode an sich, sondern die Notation. 
+In these situations, i'm feeling, that there has to be a better, more clearer, beautiful way of doing things. A way someone does not start to "chitter" when he sees this or does not want to take a shower after writing the code.     
+## Serialized Lambda
+In Java 8 sind  nun Lambdas Bestandteil der Sprache geworden, welches zunächst die Schreibweisen vereinfacht und von den anonymen Klassen einen Ausweg bietet. Diese Syntax macht sich nun Benji Weber zu nutzen. Denn "Serialized Lambda" beschreibt einen Weg den Variablen Namen eines Lambdas als Stilmittel zu nutzen und auszuwerten. Im Mittelpunkt steht dabei nicht die Methode an sich, sondern die Notation. 
+
 Das angehangene Beispiel zeigt das Endergebnis. Die Schachtelung der Methoden liest sich dabei ähnlich dem Endprodukt, erlauben zudem eine fehlerfreiere Nutzung durch z.B. die Unterstützung des Compilers für die Klammersetzung
 
 
@@ -15,7 +17,8 @@ Nun ist die erste Fragestellung natürlich, wie man an den Parameter Namen kommt
 
 
 Java 8 introduced lambdas, generating the chance to simplify the notation and getting rid of anonymous inner classes. the syntax is the starting point for the trick benji presented at JavaOne. He used it as kind of stylistic device for creating internal java dsls. He showed a way to retrieve an instance of a SerializedLambda, which has the opportunity to access the parameter names, which does make sense, if you compile with the "parameters" flag (preserves these) . applied to the ldap search query use-case, i was able to do something like this.
-
+
+
 
 ```javaa
 
