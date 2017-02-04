@@ -1,4 +1,4 @@
-package de.usu.abiegel.ldap.internal;
+package de.abiegel.ldap.internal;
 
 import java.io.Serializable;
 import java.lang.invoke.SerializedLambda;

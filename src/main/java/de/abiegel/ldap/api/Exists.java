@@ -1,12 +1,12 @@
-package de.usu.abiegel.ldap.api;
+package de.abiegel.ldap.api;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import de.usu.abiegel.ldap.internal.Attribute;
-import de.usu.abiegel.ldap.internal.Token;
-import de.usu.abiegel.ldap.internal.TypedInstance;
+import de.abiegel.ldap.internal.Attribute;
+import de.abiegel.ldap.internal.Token;
+import de.abiegel.ldap.internal.TypedInstance;
 
 public interface Exists extends Token {
  

@@ -1,4 +1,4 @@
-package de.usu.abiegel.ldap.internal;
+package de.abiegel.ldap.internal;
 
 /**
  * Base Token for all Languages Elements

@@ -1,4 +1,4 @@
-package de.usu.abiegel.ldap.internal;
+package de.abiegel.ldap.internal;
 
 public class TypedInstance<T extends Token >{
 

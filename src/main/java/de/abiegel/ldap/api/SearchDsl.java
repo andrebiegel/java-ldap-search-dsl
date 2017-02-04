@@ -1,6 +1,6 @@
-package de.usu.abiegel.ldap.api;
+package de.abiegel.ldap.api;
 
-import de.usu.abiegel.ldap.internal.Attribute;
+import de.abiegel.ldap.internal.Attribute;
 
 public interface SearchDsl extends Query, And, Or, Not,Attribute<String>,Exists {
 

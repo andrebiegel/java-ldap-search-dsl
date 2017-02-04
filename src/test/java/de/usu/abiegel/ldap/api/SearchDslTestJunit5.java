@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import de.usu.abiegel.ldap.internal.Attribute;
+import de.abiegel.ldap.api.SearchDsl;
+import de.abiegel.ldap.internal.Attribute;
 
 public class SearchDslTestJunit5 implements SearchDsl {
 	/**
@@ -16,7 +17,7 @@ public class SearchDslTestJunit5 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.Query#query(de.usu.abiegel.ldap.internal.Token)}
+	 * {@link de.abiegel.ldap.api.Query#query(de.abiegel.ldap.internal.Token)}
 	 * .
 	 */
 	@Test
@@ -28,7 +29,7 @@ public class SearchDslTestJunit5 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.And#and(de.usu.abiegel.ldap.internal.Token[])}
+	 * {@link de.abiegel.ldap.api.And#and(de.abiegel.ldap.internal.Token[])}
 	 * .
 	 */
 	@Test
@@ -50,7 +51,7 @@ public class SearchDslTestJunit5 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.Or#or(de.usu.abiegel.ldap.internal.Token[])}
+	 * {@link de.abiegel.ldap.api.Or#or(de.abiegel.ldap.internal.Token[])}
 	 * .
 	 */
 	@Test
@@ -60,7 +61,7 @@ public class SearchDslTestJunit5 implements SearchDsl {
 
 	/**
 	 * Test method for
-	 * {@link de.usu.abiegel.ldap.api.Not#not(de.usu.abiegel.ldap.internal.Token[])}
+	 * {@link de.abiegel.ldap.api.Not#not(de.abiegel.ldap.internal.Token[])}
 	 * .
 	 */
 	@Test

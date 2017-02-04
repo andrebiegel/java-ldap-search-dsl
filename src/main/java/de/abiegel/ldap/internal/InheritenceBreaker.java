@@ -1,4 +1,4 @@
-package de.usu.abiegel.ldap.internal;
+package de.abiegel.ldap.internal;
 
 import java.util.Collections;
 import java.util.List;
