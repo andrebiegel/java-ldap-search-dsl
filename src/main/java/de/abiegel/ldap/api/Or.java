@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import de.abiegel.ldap.internal.InheritenceBreaker;
 import de.abiegel.ldap.internal.Operation;
 import de.abiegel.ldap.internal.Token;
 import de.abiegel.ldap.internal.TypedInstance;

@@ -1,10 +1,5 @@
 package de.abiegel.ldap.api;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import de.abiegel.ldap.internal.Attribute;
 import de.abiegel.ldap.internal.Token;
 import de.abiegel.ldap.internal.TypedInstance;
 

@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import de.abiegel.ldap.internal.InheritenceBreaker;
 import de.abiegel.ldap.internal.Operation;
 import de.abiegel.ldap.internal.Token;
 import de.abiegel.ldap.internal.TypedInstance;
@@ -27,19 +26,6 @@ public interface Not extends Operation {
 			}
 		});
 	}
-//	default Not not(TypedInstance<?extends Token>... children) {
-//		return new Not() {
-//			@Override
-//			public String asString() {
-//				return operation(NOT);
-//			}
-//
-//			@Override
-//			public List<? extends Token> children() {
-//				return Arrays.asList(children).stream().map(TypedInstance::instance).collect(Collectors.toList());
-//			}
-//		};
-//	}
 
 	default Not not(@SuppressWarnings("unchecked") Supplier<?extends Token>... children) {
 		return new Not() {
