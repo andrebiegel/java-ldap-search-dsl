@@ -13,7 +13,7 @@ public interface Not extends Operation {
 	public static final String NOT = "!";
 
 	
-	default TypedInstance<Operation> not(@SuppressWarnings("unchecked") TypedInstance<? extends Token>... children) {
+	default TypedInstance<Operation> not(@SuppressWarnings("unchecked") TypedInstance<? extends Token> child) {
 		return ops(new Not() {
 			@Override
 			public String asString() {
@@ -22,12 +22,12 @@ public interface Not extends Operation {
 
 			@Override
 			public List<Token> children() {
-				return Arrays.asList(children).stream().map(TypedInstance::instance).collect(Collectors.toList());
+				return Arrays.asList(child.instance());
 			}
 		});
 	}
 
-	default Not not(@SuppressWarnings("unchecked") Supplier<?extends Token>... children) {
+	default Not not(@SuppressWarnings("unchecked") Supplier<?extends Token> child) {
 		return new Not() {
 			@Override
 			public String asString() {
@@ -36,7 +36,7 @@ public interface Not extends Operation {
 
 			@Override
 			public List<Token> children() {
-				return Arrays.asList(children).stream().map(Supplier::get).collect(Collectors.toList());
+				return Arrays.asList(child.get());
 			}
 		};
 	}

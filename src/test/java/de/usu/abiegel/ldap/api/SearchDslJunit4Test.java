@@ -122,8 +122,8 @@ public class SearchDslJunit4Test implements SearchDsl {
 	 */
 	@Test
 	public void testNot() {
-		assertThat(query(not(attr(test -> "value"), attr(test2 -> "value2"))).asString()).isInstanceOf(String.class)
-				.isNotNull().isEqualTo("(!(test=value)(test2=value2))");
+		assertThat(query(not(attr(test -> "value"))).asString()).isInstanceOf(String.class)
+				.isNotNull().isEqualTo("(!(test=value))");
 	}
 
 }
