@@ -32,7 +32,7 @@ import de.abiegel.ldap.internal.Attribute;
  * @author usiabiegel
  *
  */
-public class SearchDslTestJunit4 implements SearchDsl {
+public class SearchDslJunit4Test implements SearchDsl {
 
 	/**
 	 * 
@@ -100,7 +100,7 @@ public class SearchDslTestJunit4 implements SearchDsl {
 
 		assertThat(query(and(attr(test -> "value"), attr(test2 -> "value2"),
 				and(attr(test -> "value"), attr(test2 -> "value2")))).asString()).isInstanceOf(String.class).isNotNull()
-						.isEqualTo("(&(test=value)(&(test=value)(test2=value2))(test2=value2))");
+						.isEqualTo("(&(test=value)(test2=value2)(&(test=value)(test2=value2)))");
 
 	}
 

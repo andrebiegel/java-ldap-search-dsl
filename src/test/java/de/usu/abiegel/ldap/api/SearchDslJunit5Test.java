@@ -9,7 +9,7 @@ import org.junit.jupiter.api.TestInfo;
 import de.abiegel.ldap.api.SearchDsl;
 import de.abiegel.ldap.internal.Attribute;
 
-public class SearchDslTestJunit5 implements SearchDsl {
+public class SearchDslJunit5Test implements SearchDsl {
 	/**
 	 * 
 	 */
@@ -42,7 +42,7 @@ public class SearchDslTestJunit5 implements SearchDsl {
 							(Supplier<Attribute<String>>) () -> test2 -> "value2")).asString());
 			Assertions.assertEquals("(&(test=value)(test2=value2))",
 					query(and((Attribute<String>) test -> "value", (Attribute<String>) test2 -> "value2")).asString());
-			Assertions.assertEquals("(&(test=value)(&(test=value)(test2=value2))(test2=value2))",
+			Assertions.assertEquals("(&(test=value)(test2=value2)(&(test=value)(test2=value2)))",
 					query(and(attr(test -> "value"), attr(test2 -> "value2"),
 							and(attr(test -> "value"), attr(test2 -> "value2")))).asString());
 		});
