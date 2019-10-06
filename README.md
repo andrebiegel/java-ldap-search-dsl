@@ -90,7 +90,7 @@ the idea behind this kind of dsl, is to inherit all the methods defining your ds
  
 
 At the end, i learned a lot and received a new perspective of OO in defining and using decorators like this. thank´s benji !!       
-## Quelle/Sourcesn
+## Quelle/Sourcen
 * Benji Weber : Serialized Lambda (http://benjiweber.co.uk/blog/2015/08/17/lambda-parameter-names-with-reflection/)
 * Benji Weber : HTML in Java (http://benjiweber.co.uk/blog/2015/08/21/html-in-java/)
 * Benji Weber : Forward-Interface-Pattern (http://benjiweber.co.uk/blog/2014/04/14/java-forwarding-interface-pattern/)
